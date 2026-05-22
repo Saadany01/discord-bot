@@ -125,3 +125,12 @@ client.on("error", (err) => {
 });
 
 client.login(BOT_TOKEN);
+
+// ─── Keep-Alive Ping (prevents free hosts from sleeping) ──────────────────────
+const SELF_URL = process.env.RENDER_EXTERNAL_URL || process.env.SELF_URL || null;
+if (SELF_URL) {
+  setInterval(() => {
+    fetch(SELF_URL).catch(() => {});
+  }, 4 * 60 * 1000); // ping self every 4 minutes
+}
+// ─────────────────────────────────────────────────────────────────────────────
