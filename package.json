@@ -1,0 +1,17 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord voice channel bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "@discordjs/voice": "^0.19.2",
+    "opusscript": "^0.0.8",
+    "express": "^4.18.2",
+    "libsodium-wrappers": "^0.7.15"
+  }
+}
